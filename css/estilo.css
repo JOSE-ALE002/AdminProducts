@@ -17,9 +17,9 @@ body{
 	max-width: 1200px;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(3, auto);
-	grid-template-areas: "header 		header 		 header"
-						 "contenido    contenido	sidebar"						
-						 "footer 	   	 footer		footer";
+	grid-template-areas: "header 	    header 	header"
+			     "contenido    contenido	sidebar"						
+			     "footer  	   footer	footer";
 }
 
 .contenedor > div, .topic, .contenido, .sidebar, .pie{
@@ -134,10 +134,10 @@ body{
 
 @media screen and (max-width: 800px) {
 	.contenedor{
-		grid-template-areas: "header 		header 		header"
-						 "	contenido 		contenido 	contenido"
-						 "	sidebar         sidebar     sidebar	"						
-						 "	footer 			footer 		footer";		
+		grid-template-areas: "header 	   header 	header"
+				     "contenido    contenido 	contenido"
+				     "sidebar      sidebar       sidebar	"						
+				     "footer 	    footer     	 footer";		
 	}
 
 	.sidebar{
