@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Proyect CssGrid</title>	
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">	
+</head>
+<body>
+	<div class="contenedor">
+		<header class="topic">
+			<h1 style="margin: 10px; padding: 10px;">Calculo de Cotizaciones de productos</h1>
+		</header>
+		<main class="contenido">
+            <div class="container">                                
+                <form id="formulario">
+                    <div class="nom">
+                        <label>Nombre: </label>
+                        <input type="text" placeholder="Ingrese nombre del producto" id="nombre" name="nombre">
+                    </div>
+                    
+                    <div class="cant">
+                        <label>Cantidad: </label>
+                        <input type="text" placeholder="Ingrese cantidad de producto" id="cantidad" name="cantidad">                    
+                    </div>
+                    
+                    <div class="pre">
+                        <label>Precio: </label>
+                        <input type="text" placeholder="Ingrese precio unitario" id="precio" name="precio">
+                    </div>                    
+
+                    <div>
+                        <input type="submit" value="Calcular" id="enviar">
+                    </div>                    
+                </form>
+            </div>
+
+			<table class="tabla">
+                <thead>
+                    <!-- Tr: son las filas-->
+                    <!-- Th: son las columnas-->
+                    <tr>
+                        <th>Nº</th>
+                        <th>Nombre</th>
+                        <th>Cantidad</th>
+                        <th>Precio unitario sin iva</th>
+                        <th>PU con iva</th>
+                        <th>Total por Producto</th>
+                    </tr>
+                </thead>
+                <tbody>                                        
+                </tbody>
+            </table>
+		</main>			
+		<aside class="sidebar">
+			<div>
+                <h1>Widget</h1>                    
+            </div>
+
+            <div>
+                <h1>Widget</h1>                    
+            </div>
+		</aside>
+		
+		<footer class="pie">
+			<div class="info">                
+                <div class="info2">
+                    <h2>Jose Alejandro Ibanez Martinez</h2>
+                    <h2>Carnet: IM18002</h2>  
+                    <Button id="modo">Activar modo noche</Button>                          
+                </div>
+                
+                <figure>
+                    <img src="img/portada.jpeg" alt="imagen">
+                    <figcaption>Imagen del creador</figcaption>
+                </figure>                
+            </div>
+            
+            
+		</footer>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

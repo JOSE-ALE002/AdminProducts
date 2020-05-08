@@ -1,0 +1,147 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Lobster', cursive;
+}
+
+body{
+	background: #E9ECF4;
+	color: #000;	
+}
+
+.contenedor{
+	display: grid;
+	grid-gap: 10px;
+	margin: 20px auto;
+	max-width: 1200px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, auto);
+	grid-template-areas: "header 		header 		 header"
+						 "contenido    contenido	sidebar"						
+						 "footer 	   	 footer		footer";
+}
+
+.contenedor > div, .topic, .contenido, .sidebar, .pie{
+	background: #fff;
+	padding: 20px;
+	border-radius: 4px;
+}
+
+.contenedor .topic{
+	grid-area: header;
+	background: #2c4366;
+	color: white;
+	text-align: center;
+}
+
+.contenedor .contenido{
+	grid-area: contenido;
+}
+
+.contenido .container{
+	width: 75%;
+	border: 2px solid orange;
+	margin: auto;
+	padding: 20px;	
+	margin-bottom: 20px;
+}
+
+.contenedor .container #formulario{
+	border: 1px solid orangered;
+	padding: 20px;
+}
+
+.contenedor .container #formulario{
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+}
+
+.contenedor .container #formulario div{
+	margin: 20px 0;
+}
+
+.contenedor .tabla{
+	margin: auto;	
+}
+
+.tabla{
+	border: 2px solid black;
+	border-collapse: collapse; /*Separate and collapse*/
+}
+
+.tabla td{
+	border: 2px solid black;
+	padding: 20px;
+}
+
+.tabla th{
+	padding: 10px;
+	border: 2px solid black;
+}
+
+
+.contenedor .sidebar{
+	grid-area: sidebar;
+	background: #8d2c91 ;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	min-height: 100px;
+}
+.contenedor .sidebar div{
+	height: 45%;
+	min-height: 150px;	
+	background: #612b63;
+	margin: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+} 
+
+
+.contenedor .pie{
+	grid-area: footer;
+	background: #2c4366;
+	color: white;
+	text-align: center;
+}
+
+.contenedor .pie .info {
+	display: flex;
+	justify-content: space-around;
+}
+
+.contenedor .pie .info2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.contenedor .pie .info2 h1, h2, button{
+	padding: 10px;
+	margin: 10px;
+}
+
+
+.contenedor .pie .info img{
+	width: 150px;
+	height: 150px;
+}
+
+@media screen and (max-width: 800px) {
+	.contenedor{
+		grid-template-areas: "header 		header 		header"
+						 "	contenido 		contenido 	contenido"
+						 "	sidebar         sidebar     sidebar	"						
+						 "	footer 			footer 		footer";		
+	}
+
+	.sidebar{
+		flex-direction: row;
+		height: 200px;
+	}
+}
